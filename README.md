@@ -33,6 +33,7 @@
 | 정언 | 활동 기록 페이지 | feature/activities-page |
 
 ## 폴더 구조
+```
 ├── index.html
 ├── about.html
 ├── members.html
@@ -41,6 +42,7 @@
 ├── css/style.css
 ├── js/main.js
 └── images/
+```
 
 ## 협업 규칙
 - 작업 전 Issue 등록 (담당자 / 작업 내용 / 완료 조건)
