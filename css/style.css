@@ -1,0 +1,21 @@
+:root {
+  --main-color: #333;
+  --point-color: #4a90e2;
+  --bg-color: #fff;
+  --font: 'Pretendard', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--main-color);
+  background: var(--bg-color);
+}
+
+img {
+  max-width: 100%;
+}
