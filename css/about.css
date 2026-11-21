@@ -177,6 +177,20 @@
   margin: 0;
 }
 
+/* 스크롤 등장 효과 (js/about.js가 reveal 클래스를 붙인 경우에만 적용) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* 모바일 */
 @media (max-width: 768px) {
   .about {
