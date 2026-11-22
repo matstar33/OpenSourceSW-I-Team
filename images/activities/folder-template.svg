@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="기본 폴더 구조 및 PR 템플릿 세팅">
+  <rect width="640" height="400" rx="16" fill="#eef4fb"/>
+  <!-- Code Editor Panel -->
+  <rect x="36" y="32" width="568" height="336" rx="12" fill="#1e2430"/>
+  <rect x="36" y="32" width="568" height="34" rx="12" fill="#283040"/>
+  <circle cx="58" cy="49" r="5" fill="#ff6b6b"/>
+  <circle cx="75" cy="49" r="5" fill="#ffd43b"/>
+  <circle cx="92" cy="49" r="5" fill="#51cf66"/>
+  <text x="320" y="54" text-anchor="middle" font-family="monospace" font-size="12" fill="#a9b4c6">OpenSourceSW-I-Team — 초기 디렉터리 &amp; PR 템플릿</text>
+
+  <!-- Sidebar Tree -->
+  <rect x="36" y="66" width="196" height="302" fill="#232a38"/>
+  <text x="54" y="94" font-family="monospace" font-size="11" font-weight="700" fill="#7aaef2">EXPLORER</text>
+  <text x="54" y="120" font-family="monospace" font-size="12" fill="#d7e0ee">├─ .github/</text>
+  <text x="66" y="140" font-family="monospace" font-size="11" fill="#8ec5ff">│  └─ pull_request_template.md</text>
+  <text x="54" y="164" font-family="monospace" font-size="12" fill="#d7e0ee">├─ css/style.css</text>
+  <text x="54" y="186" font-family="monospace" font-size="12" fill="#d7e0ee">├─ js/main.js</text>
+  <text x="54" y="208" font-family="monospace" font-size="12" fill="#d7e0ee">├─ images/</text>
+  <text x="54" y="232" font-family="monospace" font-size="12" fill="#a8b5c8">├─ index.html</text>
+  <text x="54" y="254" font-family="monospace" font-size="12" fill="#a8b5c8">├─ about.html</text>
+  <text x="54" y="276" font-family="monospace" font-size="12" fill="#a8b5c8">├─ members.html</text>
+  <text x="54" y="298" font-family="monospace" font-size="12" fill="#a8b5c8">├─ projects.html</text>
+  <text x="54" y="320" font-family="monospace" font-size="12" fill="#63e6be">└─ activities.html</text>
+
+  <!-- Editor Content -->
+  <text x="254" y="98" font-family="monospace" font-size="12" fill="#7aaef2">:root {</text>
+  <text x="270" y="118" font-family="monospace" font-size="12" fill="#e2e8f0">--main-color: #333;</text>
+  <text x="270" y="138" font-family="monospace" font-size="12" fill="#63e6be">--point-color: #4a90e2;</text>
+  <text x="270" y="158" font-family="monospace" font-size="12" fill="#e2e8f0">--bg-color: #fff;</text>
+  <text x="254" y="178" font-family="monospace" font-size="12" fill="#7aaef2">}</text>
+
+  <line x1="254" y1="198" x2="580" y2="198" stroke="#323c4e" stroke-width="1"/>
+  <text x="254" y="224" font-family="Pretendard, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#8ec5ff">PR 체크리스트 표준화 (.github)</text>
+  <text x="254" y="248" font-family="Pretendard, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">[x] 관련 Issue 번호 연결 (closes #번호)</text>
+  <text x="254" y="272" font-family="Pretendard, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">[x] PC · 모바일 화면 정상 표시 검증</text>
+  <text x="254" y="296" font-family="Pretendard, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">[x] 상단 메뉴 이동 및 이미지 잘림 점검</text>
+  <text x="254" y="320" font-family="Pretendard, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">[x] 팀원 1명 이상 코드 리뷰 후 병합</text>
+</svg>

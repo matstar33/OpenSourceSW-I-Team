@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="2차 기획 회의 및 6인 역할 분담 보드">
+  <rect width="640" height="400" rx="16" fill="#f4f8fd"/>
+  <rect x="32" y="30" width="576" height="340" rx="12" fill="#ffffff" stroke="#dbe7f5" stroke-width="2"/>
+
+  <text x="60" y="68" font-family="Pretendard, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#222">2차 기획 회의 · 페이지 구성 및 역할 분담표</text>
+  <rect x="504" y="49" width="78" height="24" rx="12" fill="#eaf3ff"/>
+  <text x="543" y="65" text-anchor="middle" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">Issue #1~#6</text>
+
+  <!-- 6 Role Cards Grid (3x2) -->
+  <!-- Card 1 -->
+  <rect x="56" y="92" width="166" height="116" rx="10" fill="#f8fbff" stroke="#cfe2fa" stroke-width="1.5"/>
+  <text x="72" y="118" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">공통 레이아웃 · Issue #5</text>
+  <text x="72" y="142" font-family="Pretendard, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#222">길규철 (팀장)</text>
+  <text x="72" y="164" font-family="Pretendard, -apple-system, sans-serif" font-size="11" fill="#555">헤더·푸터 / 디자인 통일</text>
+  <text x="72" y="188" font-family="monospace" font-size="10" fill="#6b7a90">feature/common-layout</text>
+
+  <!-- Card 2 -->
+  <rect x="237" y="92" width="166" height="116" rx="10" fill="#f9fafc" stroke="#e4eaf2" stroke-width="1.5"/>
+  <text x="253" y="118" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">메인 화면 · Issue #6</text>
+  <text x="253" y="142" font-family="Pretendard, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#222">이주영</text>
+  <text x="253" y="164" font-family="Pretendard, -apple-system, sans-serif" font-size="11" fill="#555">index.html / 대표 소개</text>
+  <text x="253" y="188" font-family="monospace" font-size="10" fill="#6b7a90">feature/main-page</text>
+
+  <!-- Card 3 -->
+  <rect x="418" y="92" width="166" height="116" rx="10" fill="#f9fafc" stroke="#e4eaf2" stroke-width="1.5"/>
+  <text x="434" y="118" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">팀 소개 · Issue #3</text>
+  <text x="434" y="142" font-family="Pretendard, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#222">이선호</text>
+  <text x="434" y="164" font-family="Pretendard, -apple-system, sans-serif" font-size="11" fill="#555">about.html / 목표·방향성</text>
+  <text x="434" y="188" font-family="monospace" font-size="10" fill="#6b7a90">feature/team-page</text>
+
+  <!-- Card 4 -->
+  <rect x="56" y="224" width="166" height="116" rx="10" fill="#f9fafc" stroke="#e4eaf2" stroke-width="1.5"/>
+  <text x="72" y="250" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">팀원 프로필 · Issue #1</text>
+  <text x="72" y="274" font-family="Pretendard, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#222">박진석</text>
+  <text x="72" y="296" font-family="Pretendard, -apple-system, sans-serif" font-size="11" fill="#555">members.html / 6인 소개</text>
+  <text x="72" y="320" font-family="monospace" font-size="10" fill="#6b7a90">feature/members-page</text>
+
+  <!-- Card 5 -->
+  <rect x="237" y="224" width="166" height="116" rx="10" fill="#f9fafc" stroke="#e4eaf2" stroke-width="1.5"/>
+  <text x="253" y="250" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">프로젝트 · Issue #2</text>
+  <text x="253" y="274" font-family="Pretendard, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#222">김륜환</text>
+  <text x="253" y="296" font-family="Pretendard, -apple-system, sans-serif" font-size="11" fill="#555">projects.html / 카드 갤러리</text>
+  <text x="253" y="320" font-family="monospace" font-size="10" fill="#6b7a90">feature/projects-page</text>
+
+  <!-- Card 6 -->
+  <rect x="418" y="224" width="166" height="116" rx="10" fill="#eef5ff" stroke="#4a90e2" stroke-width="1.8"/>
+  <text x="434" y="250" font-family="Pretendard, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#4a90e2">활동 기록 · Issue #4</text>
+  <text x="434" y="274" font-family="Pretendard, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#222">박정언</text>
+  <text x="434" y="296" font-family="Pretendard, -apple-system, sans-serif" font-size="11" fill="#333">activities.html / 타임라인</text>
+  <text x="434" y="320" font-family="monospace" font-size="10" fill="#2b6cb0">feature/activities</text>
+</svg>
