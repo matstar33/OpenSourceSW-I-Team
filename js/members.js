@@ -1,14 +1,27 @@
-
 const memberCards = document.querySelectorAll('.member-card');
 
 memberCards.forEach(function(card) {
-  const memberImage = card.querySelector('.member-image');
+  const memberImage = card.querySelector('.member-image img');
+
+  if (memberImage) {
+    memberImage.addEventListener('error', function() {
+      memberImage.style.display = 'none';
+    });
+
+    if (memberImage.complete && memberImage.naturalWidth === 0) {
+      memberImage.style.display = 'none';
+    }
+  }
 
   card.addEventListener('mouseenter', function() {
-    memberImage.classList.add('is-zoomed');
+    if (memberImage) {
+      memberImage.classList.add('is-zoomed');
+    }
   });
 
   card.addEventListener('mouseleave', function() {
-    memberImage.classList.remove('is-zoomed');
+    if (memberImage) {
+      memberImage.classList.remove('is-zoomed');
+    }
   });
 });
