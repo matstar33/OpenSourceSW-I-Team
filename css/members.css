@@ -4,6 +4,7 @@
 
 /* 팀원 소개 영역 */
 .members-section {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 70px 30px 90px;
@@ -24,12 +25,13 @@
 .section-header p {
   font-size: 16px;
   color: #777;
+  line-height: 1.6;
 }
 
 /* 팀원 카드 전체 */
 .members-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
 }
 
@@ -37,6 +39,7 @@
 .member-card {
   --card-shadow-color: rgba(138, 92, 180, 0.16);
 
+  min-width: 0;
   background-color: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 12px;
@@ -77,39 +80,53 @@
   --card-shadow-color: rgba(65, 75, 170, 0.20);
 }
 
-/* 7번째 이후 - 보라색 기본값 사용 */
-
-/* 마우스 호버 효과 */
+/* 카드 호버 효과 */
 .member-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 28px var(--card-shadow-color);
 }
 
-/* 프로필 사진 영역 */
+/* 사진 전체 영역 */
 .member-image {
   width: 100%;
-  height: 210px;
-  background-color: #f2f3f5;
+  height: 260px;
+  background-color: #fff;
   border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
-/* 실제 프로필 이미지 */
-.member-image img {
+/* 사진이 들어가는 별도 네모 박스 */
+.member-photo-frame {
+  width: 180px;
+  height: 240px;
+  background-color: #f2f3f5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 실제 사진 */
+.member-photo-frame img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   transition: transform 0.35s ease;
 }
 
 /* 이미지 확대 효과 */
-.member-image img.is-zoomed {
+.member-photo-frame img.is-zoomed {
   transform: scale(1.04);
 }
 
 /* 카드 내부 정보 */
 .member-info {
+  min-width: 0;
   padding: 25px;
 }
 
@@ -124,14 +141,16 @@
   font-size: 14px;
   color: #888;
   margin-bottom: 22px;
+  line-height: 1.5;
 }
 
 /* 관심 기술 영역 */
 .member-tech {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 22px;
+  flex-wrap: wrap;
 }
 
 .tech-label {
@@ -139,6 +158,7 @@
   font-weight: bold;
   color: #888;
   letter-spacing: 1px;
+  padding-top: 6px;
 }
 
 /* 기술 배지 전체 */
@@ -147,6 +167,7 @@
   align-items: center;
   gap: 7px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 /* 기술 배지 공통 스타일 */
@@ -156,6 +177,7 @@
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 20px;
+  white-space: nowrap;
 }
 
 /* HTML - 주황색 */
@@ -204,14 +226,119 @@
 .member-contact {
   border-top: 1px solid #eee;
   padding-top: 15px;
+  overflow-wrap: anywhere;
 }
 
 .member-contact p {
   font-size: 13px;
   color: #666;
   margin-bottom: 9px;
+  line-height: 1.5;
 }
 
 .member-contact p:last-child {
   margin-bottom: 0;
+}
+
+/* 태블릿 화면 */
+@media (max-width: 900px) {
+  .members-section {
+    padding: 55px 25px 70px;
+  }
+
+  .members-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .member-info {
+    padding: 22px;
+  }
+}
+
+/* 모바일 화면 */
+@media (max-width: 600px) {
+  .members-section {
+    padding: 40px 18px 60px;
+  }
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .section-header h1 {
+    font-size: 26px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+
+  .members-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .member-image {
+    height: 260px;
+  }
+
+  .member-photo-frame {
+    width: 180px;
+    height: 240px;
+  }
+
+  .member-info {
+    padding: 22px;
+  }
+
+  .member-info h2 {
+    font-size: 19px;
+  }
+
+  .member-tech {
+    gap: 8px;
+  }
+
+  .tech-label {
+    font-size: 10px;
+  }
+
+  .tech-tag {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .member-contact p {
+    font-size: 12px;
+  }
+}
+
+/* 작은 모바일 화면 */
+@media (max-width: 380px) {
+  .members-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .member-info {
+    padding: 18px;
+  }
+
+  .member-image {
+    height: 240px;
+  }
+
+  .member-photo-frame {
+    width: 165px;
+    height: 220px;
+  }
+}
+
+/* 터치 화면에서는 호버 이동 효과 제외 */
+@media (hover: none) {
+  .member-card:hover {
+    transform: none;
+    box-shadow: 0 3px 12px var(--card-shadow-color);
+  }
 }
