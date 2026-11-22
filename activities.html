@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>레인보우 - 활동 기록</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/activities.css">
 </head>
 <body>
   <header class="site-header">
@@ -23,9 +24,423 @@
     </div>
   </header>
 
-  <main>
-    <!-- 담당자 작업 영역 -->
+  <main class="activities-main">
+    <!-- 상단 페이지 소개 및 요약 -->
+    <section class="activities-hero">
+      <div class="activities-container">
+        <span class="page-eyebrow">Team Rainbow Activity Log</span>
+        <h1 class="page-title">활동 기록</h1>
+        <p class="page-desc">
+          첫 기획 회의부터 공통 레이아웃 구축, 페이지별 기능 구현과 배포 준비까지
+          레인보우 팀이 함께 진행한 회의와 개발 과정을 날짜 순서대로 정리했습니다.
+        </p>
+
+        <div class="summary-grid" aria-label="활동 요약 지표">
+          <div class="summary-card">
+            <span class="summary-label">진행 일정</span>
+            <strong class="summary-value">총 6단계</strong>
+            <span class="summary-sub">2026.10.30 ~ 11.23</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">참여 인원</span>
+            <strong class="summary-value">팀원 6명</strong>
+            <span class="summary-sub">역할별 개별 브랜치 담당</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">구성 화면</span>
+            <strong class="summary-value">5개 페이지</strong>
+            <span class="summary-sub">공통 헤더·푸터 레이아웃 적용</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">협업 방식</span>
+            <strong class="summary-value">Issue &amp; PR</strong>
+            <span class="summary-sub">팀원 리뷰 승인 후 병합</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 시간 순서에 따른 활동 기록 타임라인 -->
+    <section class="timeline-section" aria-labelledby="timeline-heading">
+      <div class="activities-container">
+        <div class="section-header">
+          <div>
+            <h2 id="timeline-heading" class="section-title">시간순 진행 기록</h2>
+            <p class="section-sub">구분 필터와 정렬 버튼으로 회의 내역과 개발 단계를 확인하실 수 있습니다.</p>
+          </div>
+
+          <div class="timeline-controls">
+            <div class="filter-group" role="tablist" aria-label="활동 구분 필터">
+              <button type="button" class="filter-btn active" data-filter="all">전체 (6)</button>
+              <button type="button" class="filter-btn" data-filter="meeting">팀 회의 (2)</button>
+              <button type="button" class="filter-btn" data-filter="dev">개발 과정 (3)</button>
+              <button type="button" class="filter-btn" data-filter="release">협업·배포 (1)</button>
+            </div>
+
+            <button type="button" class="sort-btn" id="sortToggleBtn" aria-pressed="false">
+              시간순 (초기 → 최신)
+            </button>
+          </div>
+        </div>
+
+        <ol class="timeline-list" id="timelineList">
+          <!-- 활동 1 -->
+          <li class="timeline-item" data-category="meeting" data-order="1">
+            <div class="timeline-marker" aria-hidden="true">01</div>
+            <article class="timeline-card">
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time class="timeline-date" datetime="2026-10-30">2026.10.30 (금)</time>
+                  <span class="badge badge-meeting">팀 회의</span>
+                  <span class="badge badge-done">완료</span>
+                </div>
+                <h3 class="timeline-title">1차 킥오프 회의 및 GitHub 저장소 초기 세팅</h3>
+                <p class="timeline-summary">
+                  오픈소스 SW 활용 I조 6인 팀을 결성하고, 팀원 개개인의 역할과 프로젝트를 한곳에 소개하는 IT 개발 스튜디오형 포트폴리오 웹사이트를 주제로 선정했습니다.
+                </p>
+                <ul class="timeline-points">
+                  <li>공식 원격 저장소(<code>OpenSourceSW-I-Team</code>) 생성 및 MIT 라이선스 적용</li>
+                  <li>협업을 위한 커밋 메시지 접두어 규칙(<code>feat:</code>, <code>style:</code>, <code>fix:</code>, <code>docs:</code>) 합의</li>
+                  <li>파트별 독립 작업을 위한 초기 <code>feature</code> 브랜치 생성 방법 공유</li>
+                </ul>
+                <div class="timeline-footer">
+                  <span class="timeline-owner">참여: 팀원 전원 (6명)</span>
+                  <div class="tag-list">
+                    <span class="tag">저장소 개설</span>
+                    <span class="tag">MIT License</span>
+                    <span class="tag">커밋 규칙 수립</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="timeline-figure">
+                <button type="button" class="photo-trigger" data-img="images/activities/kickoff-repo.svg" data-caption="2026.10.30 — 1차 킥오프 회의 및 초기 저장소·커밋 규칙 정리">
+                  <img src="images/activities/kickoff-repo.svg" alt="1차 킥오프 회의 및 GitHub 저장소 초기 세팅 정리 화면" loading="lazy">
+                  <span class="zoom-hint">크게 보기</span>
+                </button>
+                <figcaption>1차 회의 기록 및 커밋 컨벤션 합의안</figcaption>
+              </figure>
+            </article>
+          </li>
+
+          <!-- 활동 2 -->
+          <li class="timeline-item" data-category="meeting" data-order="2">
+            <div class="timeline-marker" aria-hidden="true">02</div>
+            <article class="timeline-card">
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time class="timeline-date" datetime="2026-11-03">2026.11.03 (화)</time>
+                  <span class="badge badge-meeting">팀 회의</span>
+                  <span class="badge badge-done">완료</span>
+                </div>
+                <h3 class="timeline-title">2차 기획 회의 및 5개 페이지 역할 분담 확정</h3>
+                <p class="timeline-summary">
+                  전체 웹사이트의 메뉴 구성을 5개 핵심 화면으로 확정하고, 팀원 6명이 각자 맡을 영역과 브랜치 이름을 정해 GitHub Issue로 등록했습니다.
+                </p>
+                <ul class="timeline-points">
+                  <li>메인, 팀 소개, 팀원 프로필, 프로젝트 갤러리, 활동 기록 5개 화면 구성 확정</li>
+                  <li><code>README.md</code>에 프로젝트 기획 의도, 폴더 구조, 협업 규칙 문서화 (PR #7 병합)</li>
+                  <li>담당자별 작업 범위와 완료 조건을 명시한 GitHub Issue #1 ~ #6 일괄 등록</li>
+                </ul>
+                <div class="timeline-footer">
+                  <span class="timeline-owner">참여: 팀원 전원 (6명)</span>
+                  <div class="tag-list">
+                    <span class="tag">Issue #1~#6</span>
+                    <span class="tag">PR #7 병합</span>
+                    <span class="tag">역할 분담 완료</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="timeline-figure">
+                <button type="button" class="photo-trigger" data-img="images/activities/role-planning.svg" data-caption="2026.11.03 — 2차 기획 회의 및 팀원 6명 페이지·브랜치 분담표">
+                  <img src="images/activities/role-planning.svg" alt="6명의 팀원별 담당 페이지 및 브랜치 역할 분담표" loading="lazy">
+                  <span class="zoom-hint">크게 보기</span>
+                </button>
+                <figcaption>6인 페이지 역할 및 담당 브랜치 배정표</figcaption>
+              </figure>
+            </article>
+          </li>
+
+          <!-- 활동 3 -->
+          <li class="timeline-item" data-category="dev" data-order="3">
+            <div class="timeline-marker" aria-hidden="true">03</div>
+            <article class="timeline-card">
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time class="timeline-date" datetime="2026-11-03">2026.11.03 (화)</time>
+                  <span class="badge badge-dev">개발 과정</span>
+                  <span class="badge badge-done">완료</span>
+                </div>
+                <h3 class="timeline-title">기본 프로젝트 폴더 구조 및 PR 템플릿 구축</h3>
+                <p class="timeline-summary">
+                  모든 팀원이 동일한 환경에서 바로 페이지 개발을 시작할 수 있도록 초기 HTML 뼈대 파일과 공통 스타일 변수, Pull Request 양식을 구축했습니다.
+                </p>
+                <ul class="timeline-points">
+                  <li>5개 HTML 기본 파일 및 <code>css/</code>, <code>js/</code>, <code>images/</code> 표준 폴더 구성</li>
+                  <li>포인트 색상(<code>#4a90e2</code>), 기본 글자색, 폰트 등 공통 CSS 변수 정의</li>
+                  <li>변경 기능과 화면 캡처, 반응형 테스트 항목을 점검하는 PR 템플릿 적용</li>
+                </ul>
+                <div class="timeline-footer">
+                  <span class="timeline-owner">담당: 길규철 (팀장)</span>
+                  <div class="tag-list">
+                    <span class="tag">초기 디렉터리</span>
+                    <span class="tag">CSS 변수 세팅</span>
+                    <span class="tag">PR 템플릿</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="timeline-figure">
+                <button type="button" class="photo-trigger" data-img="images/activities/folder-template.svg" data-caption="2026.11.03 — 프로젝트 표준 디렉터리 구조 및 PR 점검 템플릿 세팅">
+                  <img src="images/activities/folder-template.svg" alt="초기 디렉터리 구조 및 PR 템플릿 설정 코드 화면" loading="lazy">
+                  <span class="zoom-hint">크게 보기</span>
+                </button>
+                <figcaption>디렉터리 구조 및 PR 체크리스트 표준화</figcaption>
+              </figure>
+            </article>
+          </li>
+
+          <!-- 활동 4 -->
+          <li class="timeline-item" data-category="dev" data-order="4">
+            <div class="timeline-marker" aria-hidden="true">04</div>
+            <article class="timeline-card">
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time class="timeline-date" datetime="2026-11-18">2026.11.18 (수) ~ 11.19 (목)</time>
+                  <span class="badge badge-dev">개발 과정</span>
+                  <span class="badge badge-done">완료</span>
+                </div>
+                <h3 class="timeline-title">공통 헤더·푸터 제작 및 모바일 반응형 메뉴 적용</h3>
+                <p class="timeline-summary">
+                  전체 페이지의 통일감을 높이기 위해 상단 고정 네비게이션 바와 하단 푸터를 구현하고, 모바일 환경에서도 편리하게 이동할 수 있도록 햄버거 메뉴를 완성했습니다.
+                </p>
+                <ul class="timeline-points">
+                  <li>5개 전체 페이지에 동일한 로고, 상단 메뉴, 팀 GitHub 링크 푸터 마크업 반영</li>
+                  <li>현재 열려 있는 파일 경로를 감지해 해당 메뉴에 <code>active</code> 강조 스타일 자동 부여</li>
+                  <li>화면 너비 <code>768px</code> 이하에서 동작하는 모바일 햄버거 메뉴 토글 구현 (PR #8 병합)</li>
+                </ul>
+                <div class="timeline-footer">
+                  <span class="timeline-owner">담당: 길규철 (feature/common-layout)</span>
+                  <div class="tag-list">
+                    <span class="tag">Issue #5 완료</span>
+                    <span class="tag">PR #8 병합</span>
+                    <span class="tag">모바일 반응형</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="timeline-figure">
+                <button type="button" class="photo-trigger" data-img="images/activities/common-layout.svg" data-caption="2026.11.18~11.19 — PC 상단 헤더 및 모바일 768px 햄버거 메뉴 구현 결과">
+                  <img src="images/activities/common-layout.svg" alt="PC 공통 헤더와 모바일 햄버거 메뉴 구성 화면" loading="lazy">
+                  <span class="zoom-hint">크게 보기</span>
+                </button>
+                <figcaption>PC 헤더·푸터 및 모바일 메뉴 레이아웃</figcaption>
+              </figure>
+            </article>
+          </li>
+
+          <!-- 활동 5 -->
+          <li class="timeline-item" data-category="dev" data-order="5">
+            <div class="timeline-marker" aria-hidden="true">05</div>
+            <article class="timeline-card">
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time class="timeline-date" datetime="2026-11-21">2026.11.21 (토) ~ 11.22 (일)</time>
+                  <span class="badge badge-dev">개발 과정</span>
+                  <span class="badge badge-progress">진행 중</span>
+                </div>
+                <h3 class="timeline-title">파트별 상세 페이지 개발 및 1차 Pull Request 등록</h3>
+                <p class="timeline-summary">
+                  완성된 공통 레이아웃을 기반으로 각 담당자 브랜치에서 개별 페이지 콘텐츠와 반응형 UI를 제작하고, 화면 검증을 거쳐 1차 PR을 등록했습니다.
+                </p>
+                <ul class="timeline-points">
+                  <li>활동 기록 페이지(<code>activities.html</code>): 시간순 타임라인, 구분 필터, 정렬 전환, 이미지 확대 모달 구현</li>
+                  <li>타 페이지와 병합 충돌이 발생하지 않도록 페이지 전용 스타일(<code>css/activities.css</code>) 및 스크립트 분리 설계</li>
+                  <li>PC 화면과 모바일 해상도에서 텍스트 줄바꿈, 메뉴 이동, 이미지 비율 정상 표시 점검</li>
+                </ul>
+                <div class="timeline-footer">
+                  <span class="timeline-owner">담당: 박정언 외 각 페이지 담당자</span>
+                  <div class="tag-list">
+                    <span class="tag">Issue #4 구현</span>
+                    <span class="tag">feature/activities</span>
+                    <span class="tag">1차 PR 제출</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="timeline-figure">
+                <button type="button" class="photo-trigger" data-img="images/activities/page-sprint.svg" data-caption="2026.11.21~11.22 — 활동 기록 상세 화면 개발 및 병합 충돌 방지 파일 분리">
+                  <img src="images/activities/page-sprint.svg" alt="파트별 페이지 구현 내역 및 충돌 방지 구조 요약" loading="lazy">
+                  <span class="zoom-hint">크게 보기</span>
+                </button>
+                <figcaption>개별 페이지 기능 개발 및 모듈 분리 구조</figcaption>
+              </figure>
+            </article>
+          </li>
+
+          <!-- 활동 6 -->
+          <li class="timeline-item" data-category="release" data-order="6">
+            <div class="timeline-marker" aria-hidden="true">06</div>
+            <article class="timeline-card">
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time class="timeline-date" datetime="2026-11-23">2026.11.23 (월) 예정</time>
+                  <span class="badge badge-release">협업·배포</span>
+                  <span class="badge badge-upcoming">예정</span>
+                </div>
+                <h3 class="timeline-title">상호 코드 리뷰, 최종 병합 및 GitHub Pages 정식 배포</h3>
+                <p class="timeline-summary">
+                  제출된 각 브랜치의 PR을 팀원끼리 교차 리뷰한 뒤 <code>main</code> 브랜치로 통합하고, 전체 링크와 반응형 동작을 최종 점검하여 배포를 마무리합니다.
+                </p>
+                <ul class="timeline-points">
+                  <li>PR별 변경 파일 및 PC·모바일 화면 캡처를 확인하고 팀원 1명 이상 승인 진행</li>
+                  <li><code>main</code> 브랜치 순차 병합 및 공통 리소스 충돌 여부 점검·기록</li>
+                  <li>GitHub Pages 배포 활성화 후 <code>README.md</code>에 최종 접속 주소 반영</li>
+                </ul>
+                <div class="timeline-footer">
+                  <span class="timeline-owner">참여: 팀원 전원 (6명)</span>
+                  <div class="tag-list">
+                    <span class="tag">코드 리뷰</span>
+                    <span class="tag">최종 병합</span>
+                    <span class="tag">GitHub Pages</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="timeline-figure">
+                <button type="button" class="photo-trigger" data-img="images/activities/review-deploy.svg" data-caption="2026.11.23 예정 — 코드 리뷰 승인, main 병합 및 GitHub Pages 배포 절차">
+                  <img src="images/activities/review-deploy.svg" alt="PR 리뷰부터 GitHub Pages 배포까지의 4단계 절차도" loading="lazy">
+                  <span class="zoom-hint">크게 보기</span>
+                </button>
+                <figcaption>최종 코드 리뷰 및 배포 점검 절차</figcaption>
+              </figure>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 주요 회의 합의 사항 & 협업 프로세스 요약 -->
+    <section class="collab-section" aria-labelledby="collab-heading">
+      <div class="activities-container">
+        <h2 id="collab-heading" class="section-title">회의 주요 합의 사항 및 협업 원칙</h2>
+        <p class="section-sub">6명의 팀원이 일관된 코드 품질과 디자인을 유지하기 위해 세운 기준입니다.</p>
+
+        <div class="collab-grid">
+          <article class="collab-box">
+            <h3 class="collab-box-title">디자인 및 화면 구현 기준</h3>
+            <ul class="collab-list">
+              <li>
+                <strong>레이아웃 폭 통일:</strong>
+                상단 헤더와 본문 컨테이너의 최대 너비를 <code>1100px</code>로 맞춰 페이지 이동 시 시선이 흔들리지 않도록 구성했습니다.
+              </li>
+              <li>
+                <strong>공통 컬러 및 타이포그래피:</strong>
+                주조색(<code>#333</code>)과 포인트 블루(<code>#4a90e2</code>), Pretendard 폰트 변수를 공통으로 사용했습니다.
+              </li>
+              <li>
+                <strong>모바일 환경 대응:</strong>
+                <code>768px</code> 이하 해상도를 기준으로 카드 배치를 1열로 전환하고 텍스트와 이미지가 잘리지 않도록 설계했습니다.
+              </li>
+            </ul>
+          </article>
+
+          <article class="collab-box">
+            <h3 class="collab-box-title">Git · GitHub 협업 워크플로우</h3>
+            <ul class="collab-list">
+              <li>
+                <strong>이슈 기반 작업 관리:</strong>
+                코드를 작성하기 전에 담당 페이지의 구현 항목을 Issue로 먼저 정의하고 번호를 부여했습니다.
+              </li>
+              <li>
+                <strong>브랜치 분리 및 직접 Push 제한:</strong>
+                <code>main</code> 브랜치 직접 수정을 금지하고, 모든 작업은 <code>feature/*</code> 브랜치에서 독립적으로 진행했습니다.
+              </li>
+              <li>
+                <strong>PR 템플릿 및 상호 승인:</strong>
+                PC·모바일 테스트 체크리스트를 통과한 뒤 PR을 올리고, 다른 팀원의 확인을 거쳐 병합합니다.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 회의 및 개발 관련 사진 갤러리 -->
+    <section class="gallery-section" aria-labelledby="gallery-heading">
+      <div class="activities-container">
+        <h2 id="gallery-heading" class="section-title">회의 및 개발 기록 스냅샷</h2>
+        <p class="section-sub">카드를 클릭하면 각 단계의 시각 기록을 크게 확인하실 수 있습니다.</p>
+
+        <div class="gallery-grid">
+          <button type="button" class="gallery-card photo-trigger" data-img="images/activities/kickoff-repo.svg" data-caption="2026.10.30 — 1차 킥오프 회의 및 저장소·커밋 규칙 합의">
+            <div class="gallery-thumb">
+              <img src="images/activities/kickoff-repo.svg" alt="1차 킥오프 회의 기록 이미지" loading="lazy">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-date">2026.10.30</span>
+              <strong class="gallery-name">1차 킥오프 및 저장소 개설</strong>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card photo-trigger" data-img="images/activities/role-planning.svg" data-caption="2026.11.03 — 6인 팀원 역할 및 담당 브랜치 배정">
+            <div class="gallery-thumb">
+              <img src="images/activities/role-planning.svg" alt="2차 기획 회의 역할 분담 이미지" loading="lazy">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-date">2026.11.03</span>
+              <strong class="gallery-name">2차 기획 및 6인 역할 분담</strong>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card photo-trigger" data-img="images/activities/folder-template.svg" data-caption="2026.11.03 — 폴더 구조 및 PR 체크리스트 구축">
+            <div class="gallery-thumb">
+              <img src="images/activities/folder-template.svg" alt="기본 폴더 구조 및 PR 템플릿 이미지" loading="lazy">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-date">2026.11.03</span>
+              <strong class="gallery-name">초기 구조 및 PR 템플릿 세팅</strong>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card photo-trigger" data-img="images/activities/common-layout.svg" data-caption="2026.11.18~11.19 — 공통 헤더·푸터 및 반응형 메뉴 완성">
+            <div class="gallery-thumb">
+              <img src="images/activities/common-layout.svg" alt="공통 헤더 푸터 및 모바일 메뉴 이미지" loading="lazy">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-date">2026.11.18 ~ 11.19</span>
+              <strong class="gallery-name">공통 헤더·푸터 및 모바일 메뉴</strong>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card photo-trigger" data-img="images/activities/page-sprint.svg" data-caption="2026.11.21~11.22 — 페이지별 상세 구현 및 모듈 분리">
+            <div class="gallery-thumb">
+              <img src="images/activities/page-sprint.svg" alt="파트별 페이지 개발 현황 이미지" loading="lazy">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-date">2026.11.21 ~ 11.22</span>
+              <strong class="gallery-name">파트별 페이지 개발 및 1차 PR</strong>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card photo-trigger" data-img="images/activities/review-deploy.svg" data-caption="2026.11.23 예정 — 상호 코드 리뷰 및 GitHub Pages 배포">
+            <div class="gallery-thumb">
+              <img src="images/activities/review-deploy.svg" alt="코드 리뷰 및 GitHub Pages 배포 절차 이미지" loading="lazy">
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-date">2026.11.23 예정</span>
+              <strong class="gallery-name">코드 리뷰 통합 및 최종 배포</strong>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- 이미지 크게 보기 모달 -->
+  <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="modalCaption" hidden>
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="창 닫기">✕</button>
+      <img src="" alt="" id="modalImage" class="modal-img">
+      <p id="modalCaption" class="modal-caption"></p>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <p>© 2026 Team Rainbow · 오픈소스 SW 활용 I조</p>
@@ -33,5 +448,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/activities.js"></script>
 </body>
 </html>
