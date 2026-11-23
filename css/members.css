@@ -102,7 +102,7 @@
 .member-photo-frame {
   width: 180px;
   height: 240px;
-  background-color: #f2f3f5;
+  background-color: transparent;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -220,6 +220,30 @@
 .tech-spring {
   color: #fff;
   background-color: #4b9b50;
+}
+
+/* C++ - 파란색 */
+.tech-cpp {
+  color: #fff;
+  background-color: #00599c;
+}
+
+/* DirectX 11 - 청록색 */
+.tech-directx {
+  color: #fff;
+  background-color: #008b8b;
+}
+
+/* HLSL - 보라색 */
+.tech-hlsl {
+  color: #fff;
+  background-color: #7048a8;
+}
+
+/* Unity - 검정색 */
+.tech-unity {
+  color: #fff;
+  background-color: #333;
 }
 
 /* 연락처 영역 */
